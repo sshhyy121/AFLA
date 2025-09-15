@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Asiafrila Steel Structure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/css/common.css" type="text/css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../common/img/logo1.png" alt="Asiafrila Steel Structure">
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./index.html#about">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="./index.html#services">PRODUCTS</a>
+                    <div class="dropdown-content">
+                        <a href="../products/Industrial.html">Industrial</a>
+                        <a href="../products/Commercial.html">Commercial</a>
+                        <a href="../products/Institutional.html">Institutional</a>
+                        <a href="../products/Husbandry & Poultry.html">Husbandry & Poultry</a>
+                        <a href="../products/Aviation & Military.html">Aviation & Military</a>
+                        <a href="../products/Other.html">Other</a>
+                    </div>
+                </li>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./get quote.html">GET QUOTE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- News Header Section -->
+    <section class="news-header">
+        <div class="news-header-container">
+            <h1>Do You Have A Construction Project We Can Help With?</h1>
+        </div>
+    </section>
+
+    <!-- News Content Section -->
+    <section class="news-section">
+        <div class="news-container">
+            <div class="news-content" id="news-content">
+                <!-- 内容将通过JavaScript动态加载 -->
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- 分页将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 所有文章内容数据
+        const allArticles = [
+            // 第一页：基础概念和技术
+            [
+                {
+                    title: "Structural Steel Density",
+                    content: "Understanding the density properties of structural steel and its impact on construction projects. Learn about weight calculations and material specifications for various steel grades used in modern construction."
+                },
+                {
+                    title: "Steel Structure Design Software",
+                    content: "Explore the latest software solutions for designing steel structures efficiently. From CAD to BIM tools, discover what's shaping the industry and how modern technology is revolutionizing steel structure design processes."
+                },
+                {
+                    title: "How to Read Steel Structure Drawings",
+                    content: "A comprehensive guide to understanding steel structure drawings, symbols, and specifications. Essential knowledge for engineers and architects working with structural steel documentation."
+                },
+                {
+                    title: "Properties of Steel Structure",
+                    content: "Key properties of steel structures including strength, durability, and flexibility. Understand what makes steel the preferred choice for modern construction projects worldwide."
+                },
+                {
+                    title: "Types of Steel Structures",
+                    content: "Comprehensive overview of different types of steel structures used in construction. From frame structures to truss systems, understand their applications and best use cases."
+                },
+                {
+                    title: "What is Structure Steel?",
+                    content: "Definition Structural steel mainly refers to a structure composed of steel plates, hot-rolled steel, thin-walled steel, steel pipes and other components connected by welding, bolts or rivets."
+                },
+                {
+                    title: "Steel Structure Cost",
+                    content: "Understanding steel structure costs: factors affecting pricing and budgeting tips. Learn how to estimate your next steel construction project accurately and efficiently."
+                },
+                {
+                    title: "Large Span Steel Structure",
+                    content: "Design principles for large span steel structures in modern construction. Explore techniques for achieving long spans without intermediate supports in industrial buildings."
+                },
+                {
+                    title: "Steel Structure Design Method",
+                    content: "Modern steel structure design methods: from concept to completion. Learn about LRFD, ASD approaches and latest computational techniques in steel structure engineering."
+                },
+                {
+                    title: "Prefabricated Steel Structure",
+                    content: "Benefits of prefabricated steel structures: faster construction, quality control, and cost efficiency. Discover why prefab steel is the future of construction industry."
+                }
+            ],
+            // 第二页：地区和制造商
+            [
+                {
+                    title: "Steel Structure Manufacturers in Africa",
+                    content: "The number of steel structure manufacturers is increasing day by day. This is due to the high demand for quality pre-engineered steel structures across the African continent."
+                },
+                {
+                    title: "Steel Structural Manufacturers in Singapore",
+                    content: "Steel is still the preferred material in the construction industry. Steel provides superior strength, high-speed construction, flexibility in design, and aesthetics in Singapore's market."
+                },
+                {
+                    title: "Steel Structure Manufacturers in Pakistan",
+                    content: "Steel structure manufacturing is an essential part of modern-day civil engineering, construction, and architecture in Pakistan. The industry has seen significant growth in recent years."
+                },
+                {
+                    title: "Steel Structure Manufacturers in Oman",
+                    content: "Steel structure manufacturing is an essential part of modern-day civil engineering, construction, and architecture in Oman. Steel has proven to be the most reliable construction material."
+                },
+                {
+                    title: "Structural Steel Fabricators in Australia",
+                    content: "Australian structural steel fabricators have a diverse range working across various markets from industrial building to complex structures with competitive quality standards."
+                },
+                {
+                    title: "Steel Structure Manufacturers in Sri Lanka",
+                    content: "The steel industry has always been crucial for development. The continued demand has led to significant growth of steel structure manufacturers in Sri Lanka's construction sector."
+                },
+                {
+                    title: "Structural Steel Fabricators in Canada",
+                    content: "Structural steel fabrication is essential for modern architecture, civil engineering, and construction across Canada's diverse climate and geographical conditions."
+                },
+                {
+                    title: "Steel Structure Building Manufacturers in Saudi Arabia",
+                    content: "In Saudi Arabia, there has been an increase in steel structure usage for building various facilities. Steel offers architects more design freedom in terms of color, shape, and texture."
+                },
+                {
+                    title: "Steel Structure Building Manufacturers in Bangladesh",
+                    content: "Steel structure building in Bangladesh is increasing daily due to high demand for quality pre-engineered steel buildings. The industry plays a vital role in the national economy."
+                },
+                {
+                    title: "Steel Structure Building Manufacturers in Egypt",
+                    content: "Steel structure building is integral to modern construction, architecture, and civil engineering in Egypt. It's the preferred material for high-rise buildings and infrastructure projects."
+                }
+            ],
+            // 第三页：工作坊和实用指南
+            [
+                {
+                    title: "5 factors you need to consider when building a steel structure workshop",
+                    content: "Compared with traditional workshops, steel structure workshops have significant advantages: low construction cost, short construction period and high strength. Thus it has been widely used."
+                },
+                {
+                    title: "How to achieve anti-corrosion in steel structure workshop",
+                    content: "(1) Corrosion resistance: Its low-temperature impact toughness is better than general structural steel. (2) Hot-dip galvanizing: immerse derusted steel components in molten zinc solution."
+                },
+                {
+                    title: "Pre-engineered buildings manufacturer in India",
+                    content: "Pre-engineered buildings have become very common in India, leading to growth of pre-engineered building manufacturers. The advantages include cost-effectiveness and rapid construction."
+                },
+                {
+                    title: "Structural Steel Fabrication Companies in UAE",
+                    content: "The UAE hosts the best steel fabrication companies. Steel structure is used in wide variety of applications and construction projects across the Emirates."
+                },
+                {
+                    title: "Steel structure contractor Malaysia",
+                    content: "Malaysia has witnessed increase in steel structure contractors. Steel structure construction offers versatility in creating various shapes and architectural forms."
+                },
+                {
+                    title: "Steel Structure China",
+                    content: "We are one of the best steel structure building manufacturers in China, providing professional aircraft hangars, agricultural steel structures, multi-storey buildings, and industrial services."
+                },
+                {
+                    title: "Steel Structure Workshop",
+                    content: "Essential considerations for steel structure workshop design and construction. From layout planning to equipment installation, discover industry best practices and standards."
+                },
+                {
+                    title: "Steel Structure Warehouse Advantages",
+                    content: "Key advantages of steel structure warehouses include durability, flexibility, and cost-effectiveness. Understand why steel is ideal for storage and logistics facilities."
+                }
+            ]
+        ];
+
+        let currentPage = 1;
+        const articlesPerPage = 10;
+
+        // 计算总页数
+        const totalPages = Math.ceil(allArticles.flat().length / articlesPerPage);
+
+        // 渲染文章内容
+        function renderArticles(page) {
+            const contentDiv = document.getElementById('news-content');
+            contentDiv.innerHTML = '';
+            
+            const startIndex = (page - 1) * articlesPerPage;
+            const endIndex = Math.min(startIndex + articlesPerPage, allArticles.flat().length);
+            const articlesToShow = allArticles.flat().slice(startIndex, endIndex);
+            
+            articlesToShow.forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.className = 'article-item';
+                articleDiv.innerHTML = `
+                    <h2>${article.title}</h2>
+                    <p>${article.content}</p>
+                `;
+                contentDiv.appendChild(articleDiv);
+            });
+        }
+
+        // 渲染分页
+        function renderPagination() {
+            const paginationDiv = document.getElementById('pagination');
+            paginationDiv.innerHTML = '';
+            
+            // 上一页
+            const prevLink = document.createElement('a');
+            prevLink.href = '#';
+            prevLink.className = 'page-link';
+            prevLink.textContent = '← Prev';
+            prevLink.style.display = currentPage === 1 ? 'none' : 'inline-block';
+            prevLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderPage();
+                }
+            });
+            paginationDiv.appendChild(prevLink);
+            
+            // 页码
+            for (let i = 1; i <= totalPages; i++) {
+                const pageLink = document.createElement('a');
+                pageLink.href = '#';
+                pageLink.className = 'page-link';
+                if (i === currentPage) {
+                    pageLink.className += ' active';
+                }
+                pageLink.textContent = i;
+                pageLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentPage = i;
+                    renderPage();
+                });
+                paginationDiv.appendChild(pageLink);
+            }
+            
+            // 下一页
+            const nextLink = document.createElement('a');
+            nextLink.href = '#';
+            nextLink.className = 'page-link';
+            nextLink.textContent = 'Next →';
+            nextLink.style.display = currentPage === totalPages ? 'none' : 'inline-block';
+            nextLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderPage();
+                }
+            });
+            paginationDiv.appendChild(nextLink);
+        }
+
+        // 渲染整个页面
+        function renderPage() {
+            renderArticles(currentPage);
+            renderPagination();
+            // 滚动到顶部
+            window.scrollTo(0, 0);
+        }
+
+        // 初始化页面
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPage();
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="company-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>Qingdao Asiafrila Steel Structure CO., Ltd</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Address: No.7 Huian Road, Chengyang, Qingdao, China</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: asiafrila@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>HP / WhatsApp / WeChat: +8613730931591</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;  Qingdao Asiafrila Steel Structure CO., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
