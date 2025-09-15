@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asiafrila Steel Structure AFLA - Professional Steel Structure Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/css/common.css" type="text/css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../common/img/logo1.png" alt="Asiafrila Steel Structure">
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./index.html#about">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="./index.html#services">PRODUCTS</a>
+                    <div class="dropdown-content">
+                        <a href="../products/Industrial.html">Industrial</a>
+                        <a href="../products/Commercial.html">Commercial</a>
+                        <a href="../products/Institutional.html">Institutional</a>
+                        <a href="../products/Husbandry & Poultry.html">Husbandry & Poultry</a>
+                        <a href="../products/Aviation & Military.html">Aviation & Military</a>
+                        <a href="../products/Other.html">Other</a>
+                    </div>
+                </li>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./get quote.html">GET QUOTE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section - No Text -->
+    <section class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="../common/img/home/1.png" alt="Steel Structure Building">
+            </div>
+            <div class="carousel-slide">
+                <img src="../common/img/home/2.png" alt="Industrial Factory">
+            </div>
+            <div class="carousel-slide">
+                <img src="../common/img/home/3.png" alt="Commercial Building">
+            </div>
+            <div class="carousel-slide">
+                <img src="../common/img/home/4.png" alt="Warehouse Logistics">
+            </div>
+            <div class="carousel-slide">
+                <img src="../common/img/home/5.png" alt="Agricultural Building">
+            </div>
+
+            <button class="carousel-nav carousel-prev" onclick="previousSlide()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-nav carousel-next" onclick="nextSlide()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+                <span class="indicator" onclick="goToSlide(3)"></span>
+                <span class="indicator" onclick="goToSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Introduction -->
+    <section id="about" class="company-intro">
+        <div class="intro-fade-in">
+            <h2 class="intro-title">COMPANY INTRODUCTION</h2>
+        </div>
+        <div class="company-map">
+            <img src="../common/img/map.png" alt="Company Location Map" style="width: 100%; max-width: 800px; height: auto; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+        <div class="company-content">
+            <p><strong>Qingdao Asiafrila Steel Structure CO., Ltd</strong> is a professional steel structure company with special qualification of steel structure. Located in Konggang industrial park and established in 2019, we mainly specialized in light and heavy steel structure designing, manufacturing and installing.</p>
+            
+            <p>With 3 factories and a floor area 26,000 m², workshop area 22,000 m², we own the light H steel production line, C/Z purlin production line and various types of profile sheet machines.</p>
+        </div>
+
+        <div class="vision-mission">
+            <div class="vision-card">
+                <h3>CORPORATE VISION</h3>
+                <p>A reliable and preferred supplier of building material products and solutions in the steel industry area.</p>
+            </div>
+
+            <div class="mission-card">
+                <h3>CORPORATE MISSION</h3>
+                <ul>
+                    <li>To supply our client with Top Quality & Innovative Products at reasonable price</li>
+                    <li>Satisfying customer requirements</li>
+                    <li>Provide efficient & reliable service</li>
+                    <li>Establishing a mutually rewarding relationship</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2 class="services-title">PRODUCTS</h2>
+        <div class="services-grid">
+            <div class="service-category">
+                    <h3>Industrial</h3>
+                    <ul>
+                        <li>Factories</li>
+                        <li>Workshops</li>
+                        <li>Warehouses</li>
+                        <li>Cold stores</li>
+                        <li>Car parking sheds</li>
+                    </ul>    
+            </div>
+            <div class="service-category">
+                <h3>Commercial</h3>
+                <ul>
+                    <li>Showrooms</li>
+                    <li>Distribution centers</li>
+                    <li>Supermarkets</li>
+                    <li>Fast food restaurants</li>
+                    <li>Offices</li>
+                    <li>Labor camps</li>
+                    <li>Service stations</li>
+                    <li>Shopping centers</li>
+                </ul>
+            </div>
+            <div class="service-category">
+                <h3>Husbandry & Poultry</h3>
+                <ul>
+                    <li>Layer sheds and farms</li>
+                    <li>Broiler sheds and farms</li>
+                    <li>Pig sheds and farms</li>
+                    <li>Sheep sheds and farms</li>
+                    <li>Dairy sheds and farms</li>
+                    <li>House stable and farms</li>
+                    <li>Slaughter houses</li>
+                    <li>Incubation workshop</li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>Institutional</h3>
+                <ul>
+                    <li>Schools</li>
+                    <li>Exhibition halls</li>
+                    <li>Hospitals</li>
+                    <li>Theaters/auditoriums</li>
+                    <li>Sports halls</li>
+                    <li>Recreational facilities</li>
+                    <li>Gymnasiums</li>
+                    <li>Swimming pools</li>
+                    <li>Indoor tennis courts</li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>Aviation & Military</h3>
+                <ul>
+                    <li>Aircraft hangars</li>
+                    <li>Maintenance warehouse</li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>Other</h3>
+                <ul>
+                    <li>Photovoltaic solar engineering</li>
+                    <li>Clean system room</li>
+                    <li>Hospital electric beds</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let autoPlayInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetAutoPlay();
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        }
+
+        // Pause autoplay on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            startAutoPlay();
+        });
+
+        // Touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            clearInterval(autoPlayInterval);
+        });
+
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoPlay();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                previousSlide();
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                previousSlide();
+                resetAutoPlay();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+                resetAutoPlay();
+            }
+        });
+
+        // Start autoplay
+        startAutoPlay();
+    </script>
+
+    <!-- Company Footer -->
+    <footer class="company-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>Qingdao Asiafrila Steel Structure CO., Ltd</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Address: No.7 Huian Road, Chengyang, Qingdao, China</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: asiafrila@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>HP / WhatsApp / WeChat: +8613730931591</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;  Qingdao Asiafrila Steel Structure CO., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Company Footer Styles */
+        .company-footer {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .company-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.8rem;
+            gap: 0.5rem;
+        }
+
+        .info-item i {
+            color: #ff6b35;
+            width: 20px;
+        }
+
+        .info-item span {
+            color: #ecf0f1;
+            font-size: 1rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            .company-footer {
+                padding: 2rem 0 1rem;
+            }
+
+            .info-item {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .info-item span {
+                font-size: 0.9rem;
+            }
+
+            .company-info h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</body>
+</html>
